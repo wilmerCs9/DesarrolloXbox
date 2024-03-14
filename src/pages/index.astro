@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="container">
+		<div class="wrapper">
+			<div class="box img1">Img1</div>
+			<div class="box img2">Img2</div>
+			<div class="box img3">Img3</div>
+			<div class="box img4">Img4</div>
+			<div class="box img5">Img5</div>
+			<div class="box img6">Img6</div>
+			<div class="box img7">Img7</div>
+			<div class="box img8">Img8</div>
+			<div class="box img9">Img9</div>
+			<div class="box img10">Img10</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.wrapper {
+		display: grid;
+		grid-template-rows: 120px 120px 120px 120px;
+		grid-template-areas:
+		 "img1 img1 img2 img3" 
+		 "img1 img1 img6 img6" 
+		 "img4 img5 img6 img6"
+		 "img7 img8 img9 img10"
+		;
+	}
+
+	.box {
+		display: flex;
+		font-family: Verdana;
+		align-items: center;justify-content: center;
+		font-weight: bold;
+		color: white;
+		}
+		.img1 {
+			grid-area: img1;
+			background: orange;
+		}
+		.img2 {
+			grid-area: img2;
+			background: green;
+		}
+
+		.img3 {
+			grid-area: img3;
+			background: red;
+		}
+
+		.img4 {
+			grid-area: img4;
+			background: blue;
+		}
+
+		.img5 {
+			grid-area: img5;
+			background: pink;
+		}
+
+		.img6 {
+			grid-area: img6;
+			background: black;
+		}
+
+		.img7 {
+			grid-area: img7;
+			background: brown;
+		}
+
+		.img8 {
+			grid-area: img8;
+			background: thistle;
+		}
+
+		.img9 {
+			grid-area: img9;
+			background: turquoise;
+		}
+
+		.img10 {
+			grid-area: img10;
+			background: grey;
+		}
+</style>
