@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import { Icon } from "astro-icon/components";
 ---
 
 <!doctype html>
@@ -16,14 +18,56 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<header class="bg-blue-500 h-16 flex items-center">
-		este es mi header
-	</header>
-
 	<body>
+		<header class="container max-w-7xl mx-auto h-16 flex items-center">
+			<div class="flex space-x-6">
+				<img
+					class="h-6"
+					src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+				/>
+				<div class="w-[2px] h-6 bg-slate-800"></div>
+				<img class="h-6" src="/xbox-logo.png" />
+			</div>
+			<menu class="ml-8">
+				<div class="flex items-center">
+					<a
+						href="#"
+						class="hover:underline underline-offset-[6px] decoration-2"
+					>
+						Game Pass
+					</a>
+					<Icon name="mdi:chevron-down" />
+				</div>
+			</menu>
+		</header>
+		<div class="relative">
+			<div class="absolute left-20  h-full flex items-center ">
+				<h1 class="text-white text-5xl font-bold">
+					FINAL FANTASY XIV <br> Online
+				</h1>
+			</div>
+			<div class="absolute left-20 top-56 h-full flex items-center ">
+				<p class="text-white text-5xl ">
+					Disfruta de una aventura <br> aclamada por la crítica en <br> Xbox Series X|S.
+				</p>
+			</div>
+			<video
+				aria-label="Ambient video alt text"
+				poster="https://assets.xboxservices.com/assets/45/5a/455a189b-0e7a-48bc-a966-9bf5ec8c08c2.jpg?n=896254_Page-Hero-1084_1920x720_01.jpg"
+				muted=""
+				autoplay=""
+				loop=""
+				alt="Video de FINAL FANTASY XIV Online con imágenes del juego y cinemáticas"
+				><source
+					class="heroImgDesktop"
+					src="https://assets.xboxservices.com/assets/12/ff/12ff90f8-439f-42a6-892b-1bf80f02f027.mp4?n=FFXIV-Online_HP-Video_1920x720_04.mp4"
+					type="video/mp4"
+					srcset="https://assets.xboxservices.com/assets/12/ff/12ff90f8-439f-42a6-892b-1bf80f02f027.mp4?n=FFXIV-Online_HP-Video_1920x720_04.mp4"
+				/></video
+			>
+		</div>
+
 		<slot />
 	</body>
 </html>
-<style is:global>
-	
-</style>
+<style is:global></style>
